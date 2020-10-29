@@ -126,7 +126,7 @@ function main() {
     // Assign the function results to a variable so we can check if a string or null was returned.
     let mappedAddress = getIpv4MappedIpv6Address(sampleIpv4s[i]);
 
-  getIpv4MappedIpv6Address(mappedAddress => {
+  getFirstIpAddress(sampleCidrs[i], (data, error) => {
     if( mappedAddress ) {
       console.log(`  IPv4 ${sampleIpv4s[i]} mapped to IPv6 Address: ${mappedAddress}`);
     } else {
